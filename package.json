@@ -1,0 +1,29 @@
+{
+  "name": "wrapped-xx",
+  "version": "1.0.0",
+  "description": "ETH Wrapped version of xx coin",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test",
+    "test:watch": "nodemon --exec \"npm run test\"",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xx-labs/wrapped-xx.git"
+  },
+  "author": "xx labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xx-labs/wrapped-xx/issues"
+  },
+  "homepage": "https://github.com/xx-labs/wrapped-xx#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.0.0",
+    "truffle": "^5.1.65"
+  }
+}
