@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/xx-labs/wrapped-xx#readme",
   "dependencies": {
-    "@openzeppelin/contracts": "^3.0.0",
+    "@openzeppelin/contracts": "4.9.3",
     "truffle": "^5.1.65"
   }
 }
