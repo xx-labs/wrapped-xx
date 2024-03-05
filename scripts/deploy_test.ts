@@ -14,7 +14,6 @@ const adminAddress = "0xd74db3908a5ba94559ef9baa00cd597ad8cbd0f6";
 
 async function main() {
   const signers = await ethers.getSigners();
-  console.log(signers);
   const base = signers[0];
   const deployer =
     signers.find((s) => s.address === wrappedXXDeployer) ||
@@ -32,7 +31,7 @@ async function main() {
   });
   await tx.wait(1);
 
-  const balance = await base.provider.getBalance(create2ProxyDeployer);
+  let balance = await base.provider.getBalance(create2ProxyDeployer);
   console.log("CREATE2 deployer balance:", ethers.formatEther(balance));
 
   // Send raw transaction
@@ -59,9 +58,12 @@ async function main() {
   // Fund deployer
   tx = await base.sendTransaction({
     to: wrappedXXDeployer,
-    value: ethers.parseEther("1"),
+    value: ethers.parseEther("10"),
   });
   await tx.wait(1);
+
+  balance = await base.provider.getBalance(wrappedXXDeployer);
+  console.log("Wrapped XX deployer balance:", ethers.formatEther(balance));
 
   // Deploy Wrapped XX using CREATE2 proxy
   const data =

@@ -5,6 +5,9 @@ node_modules
 artifacts
 cache
 
+# Env
+.env
+
 # Types
 typechain-types
 

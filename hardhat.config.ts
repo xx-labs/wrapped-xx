@@ -25,6 +25,7 @@ const config: HardhatUserConfig = {
     // ETH mainnet
     mainnet: {
       url: MAINNET_URL,
+      ledgerAccounts: ["0x70fFda7eef19d00EAe79ba041f1982016CA6ADd4"]
     },
   },
 };

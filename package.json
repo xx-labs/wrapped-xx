@@ -8,7 +8,9 @@
   },
   "scripts": {
     "compile": "npx hardhat compile",
-    "deploy:test": "npx hardhat run scripts/deploy_test.ts"
+    "deploy:test": "npx hardhat run scripts/deploy_test.ts",
+    "deploy": "npx hardhat --network mainnet run scripts/deploy.ts",
+    "check": "npx hardhat --network mainnet run scripts/check.ts"
   },
   "repository": {
     "type": "git",
