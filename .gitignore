@@ -1,5 +1,13 @@
-# Ignore npm modules
+# Node modules
 node_modules
 
-# Ignore build folder
-build
+# Build
+artifacts
+cache
+
+# Types
+typechain-types
+
+# Editor directories and files
+.idea
+.vscode
